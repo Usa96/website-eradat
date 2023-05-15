@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Translate Check</title>
+</head>
+<body>
+	<h1>Hello World</h1>
+	<p>This is a paragraph.</p>
+	<button onclick="translate()">Translate</button>
+
+	<script>
+		let lang = "en"; // set initial language to English
+
+		function translate() {
+		  const elements = document.querySelectorAll('body, body *');
+		  const arabic = ['ا', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك', 'ل', 'م', 'ن', 'ه', 'و', 'ي'];
+		  const english = ['a', 'b', 't', 'th', 'j', 'h', 'kh', 'd', 'dh', 'r', 'z', 's', 'sh', 's', 'dh', 't', 'z', "'", 'gh', 'f', 'q', 'k', 'l', 'm', 'n', 'h', 'w', 'y'];
+
+		  for (let i = 0; i < elements.length; i++) {
+		    const text = elements[i].textContent.trim();
+		    let translatedText = "";
+
+		    if (lang === "en") {
+		      translatedText = translateText(text, arabic, english);
+		    } else {
+		      translatedText = translateText(text, english, arabic);
+		    }
+
+		    elements[i].textContent = translatedText;
+		  }
+
+		  if (lang === "en") {
+		    lang = "ar";
+		    document.getElementById("translate-btn").textContent = "Translate to English";
+		  } else {
+		    lang = "en";
+		    document.getElementById("translate-btn").textContent = "Translate to Arabic";
+		  }
+		}
+
+		function translateText(text, fromChars, toChars) {
+		  let translatedText = "";
+
+		  for (let i = 0; i < text.length; i++) {
+		    const index = fromChars.indexOf(text[i].toLowerCase());
+		    if (index > -1) {
+		      const char = text[i].toLowerCase() === text[i] ? toChars[index] : toChars[index].toUpperCase();
+		      translatedText += char;
+		    } else {
+		      translatedText += text[i];
+		    }
+		  }
+
+		  return translatedText;
+		}
+	</script>
+</body>
+</html>

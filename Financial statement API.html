@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>AAPL Financial Statements</title>
+</head>
+<body>
+	<h1>AAPL Financial Statements</h1>
+	<div id="financial-statements"></div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			var apiKey = '472c5b72086802de5eb62410d0a01b4e';
+			var baseUrl = 'https://financialmodelingprep.com/api/v3/';
+			var statementTypes = ['income-statement', 'balance-sheet-statement', 'cash-flow-statement'];
+
+			var displayFinancialStatements = function(statements) {
+				var tableHtml = '<table>';
+				tableHtml += '<thead><tr><th>Period</th><th>Revenue</th><th>Gross Profit</th><th>Net Income</th></tr></thead><tbody>';
+				$.each(statements, function(index, statement) {
+					tableHtml += '<tr><td>' + statement['date'] + '</td>';
+					tableHtml += '<td>' + statement['revenue'] + '</td>';
+					tableHtml += '<td>' + statement['grossProfit'] + '</td>';
+					tableHtml += '<td>' + statement['netIncome'] + '</td></tr>';
+				});
+				tableHtml += '</tbody></table>';
+				$('#financial-statements').html(tableHtml);
+			};
+
+			var getFinancialStatements = function() {
+				$.each(statementTypes, function(index, statementType) {
+					$.ajax({
+						url: baseUrl + statementType + '/AAPL',
+						data: {
+							apikey: apiKey,
+							limit: 4
+						},
+						dataType: 'json',
+						type: 'GET',
+						success: function(data) {
+							displayFinancialStatements(data);
+						}
+					});
+				});
+			};
+
+			getFinancialStatements();
+		});
+	</script>
+</body>
+</html>
