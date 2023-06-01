@@ -767,3 +767,145 @@
 	
 
 })(window.jQuery);
+
+	/* ==========================================================================
+   For NavBar
+   ========================================================================== */
+
+   $(function () {
+    $(window).on('scroll', function () {
+        if ( $(window).scrollTop() > 10 ) {
+            $('.navbar').addClass('active');
+        } else {
+            $('.navbar').removeClass('active');
+        }
+    });
+});
+
+	/* ==========================================================================
+   For NavBar - Home page
+   ========================================================================== */
+
+  window.addEventListener("scroll", function () {
+	const navbar = document.querySelector(".navbar");
+	const logo = document.querySelector("#logo");
+	const bannerSection = document.querySelector(".banner-section");
+  
+	const bannerSectionHeight = bannerSection.offsetHeight;
+	const scrolled = window.scrollY > bannerSection.offsetTop + bannerSectionHeight;
+  
+	navbar.classList.toggle("scrolled", scrolled);
+	if (scrolled) {
+	  logo.setAttribute("src", "assets/Images-Eradat/Logo/ERADAT-Logo-121 by 129.png");
+	} else {
+	  logo.setAttribute("src", "assets/Images-Eradat/Logo/Eradat_logos_-_black_and_white_-_121_by_129-removebg-preview.png");
+	}
+  });
+
+  window.addEventListener("scroll", function () {
+	const navbar = document.querySelector(".navbar");
+	const bannerSection = document.querySelector(".banner-section");
+  
+	const bannerSectionHeight = bannerSection.offsetHeight;
+	const scrolled = window.scrollY > bannerSection.offsetTop + bannerSectionHeight;
+  
+	navbar.classList.toggle("scrolled", scrolled);
+  
+	const navLinks = document.querySelectorAll(".navbar .nav-link");
+	if (scrolled) {
+	  navLinks.forEach(function (link) {
+		link.style.color = "#000000"; // Set font color to black
+	  });
+	} else {
+	  navLinks.forEach(function (link) {
+		link.style.color = "#ffffff"; // Set font color to white
+	  });
+	}
+  });
+
+  	/* =======================================================================================
+   For NavBar - About us page - changing the font color and logo after passing section feature
+   =========================================================================================== */
+  
+   window.addEventListener("scroll", function() {
+	const navbar = document.querySelector(".navbar");
+	const logo = navbar.querySelector("img");
+	const pageTitleSection = document.querySelector(".page-title.centred");
+  
+	const scrolled = window.scrollY > pageTitleSection.offsetTop + pageTitleSection.offsetHeight;
+  
+	navbar.classList.toggle("scrolled", scrolled);
+	if (scrolled) {
+	  logo.setAttribute("src", "assets/Images-Eradat/Logo/ERADAT-Logo-121 by 129.png");
+	} else {
+	  logo.setAttribute("src", "assets/Images-Eradat/Logo/Eradat_logos_-_black_and_white_-_121_by_129-removebg-preview.png");
+	}
+  });
+
+  window.addEventListener("scroll", function () {
+	const navbar = document.querySelector(".navbar");
+	const pageTitleSection = document.querySelector(".page-title.centred");
+  
+	const pageTitleSectionOffset = pageTitleSection.offsetTop;
+	const scrolled = window.scrollY > pageTitleSectionOffset + pageTitleSection.offsetHeight;
+  
+	navbar.classList.toggle("scrolled", scrolled);
+  
+	const navLinks = document.querySelectorAll(".navbar .nav-link");
+	if (scrolled) {
+	  navLinks.forEach(function (link) {
+		link.style.color = "#000000"; // Set font color to black
+	  });
+	} else {
+	  navLinks.forEach(function (link) {
+		link.style.color = "#ffffff"; // Set font color to white
+	  });
+	}
+  });
+
+   /* =======================================================================================
+   For Mobile View Navbar
+   =========================================================================================== */
+   $(document).ready(function() {
+	if ($('.mobile-menu').length) {
+	  $('.mobile-menu .menu-box').mCustomScrollbar();
+  
+	  var mobileMenuContent = $('.main-menu').html();
+	  $('.mobile-menu .menu-outer').html(mobileMenuContent);
+  
+	  // Dropdown Button
+	  $('.mobile-menu li.dropdown .dropdown-btn').on('click', function () {
+		$(this).toggleClass('open');
+		$(this).prev('ul').slideToggle(500);
+	  });
+  
+	  // Menu Toggle Btn
+	  $('.mobile-nav-toggler').on('click', function () {
+		$('body').addClass('mobile-menu-visible');
+	  });
+  
+	  // Menu Toggle Btn
+	  $('.mobile-menu .menu-backdrop, .mobile-menu .close-btn').on('click', function () {
+		$('body').removeClass('mobile-menu-visible');
+	  });
+	}
+  });
+
+  $(document).ready(function() {
+	$(window).scroll(function() {
+	  var bannerSection = $('.banner-section.style-three');
+	  var toggleIcon = $('.mobile-nav-toggler i');
+	  
+	  if (bannerSection.length) {
+		var bannerHeight = bannerSection.outerHeight();
+		var scrollTop = $(window).scrollTop();
+	
+		if (scrollTop > bannerHeight) {
+		  toggleIcon.css('color', 'black');
+		} else {
+		  toggleIcon.css('color', 'white');
+		}
+	  }
+	});
+  });
+  

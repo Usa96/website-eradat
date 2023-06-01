@@ -39,110 +39,69 @@
 
     <!-- main header -->
     <header class="main-header style-one style-six">
-        <div class="header-top">
-            <div class="auto-container">
-                <div class="top-inner clearfix">
-                    <ul class="info top-left pull-left">
-                        <li><i class="fas fa-map-marker-alt"></i>Kuwait City, Kuwait</li>
-                        <li><i class="fas fa-headphones"></i>Contact us <a href="tel:+965 243434343">+965 243434343</a></li>
-                    </ul>
-                    <div class="top-right pull-right">
-                        <ul class="social-links clearfix">
-                            <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+        <nav class="navbar navbar-expand-lg fixed-top py-3">
+          <div class="container">
+            <div class="mobile-logo">
+              <a href="index.html">
+                <img src="assets/Images-Eradat/Logo/Eradat_logos_-_black_and_white_-_121_by_129-removebg-preview.png" alt="Image" id="logo">
+              </a>
             </div>
-        </div>
-        <div class="header-lower">
-            <div class="auto-container">
-                <div class="outer-box clearfix">
-                    <div class="logo-box pull-left" style="padding: 15px;">
-                        <figure class="logo"><a href="index.html"><img src="assets/Images-Eradat/Logo/Logo-edited-new-version-header.png" alt=""></a></figure>
-                    </div>
-                    <div class="menu-area pull-right">
-                        <!--Mobile Navigation Toggler-->
-                        <div class="mobile-nav-toggler">
-                            <i class="icon-bar"></i>
-                            <i class="icon-bar"></i>
-                            <i class="icon-bar"></i>
-                        </div>
-                        <nav class="main-menu navbar-expand-md navbar-light">
-                            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                                <ul class="navigation clearfix">
-                                    <li class="dropdown"><a href="index.html">Home</a>
-                                    </li> 
-                                    <li class="dropdown"><a href="about-2.html">About</a>
-                                    </li>
-                                    <li class="current dropdown"><a href="project-element-1.html">Properties</a>
-                                        <ul>
-                                            <li><a href="Bneid Al Gar Medical Centre.html">Bneid Al Gar Medical Centre</a></li>
-                                            <li><a href="Al Manar Complex.html">Al Manar Complex</a></li>
-                                            <li><a href="Domus 1.html">Domus 1</a></li>
-                                            <li><a href="Durrar Complex.html">Durrar Complex</a></li>
-                                            <li><a href="Farwaniya Property.html">Farwaniya Residential Property 5</a></li>
-                                            <li><a href="Fintas Complex.html">Fintas Complex</a></li>
-                                            <li><a href="Ibn Khaldoun Complex.html">Ibn Khaldoon</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="media.html">Media</a>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Investor Relations</a>
-                                    </li>                              
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
+      
+            <!-- Mobile Navigation Toggler -->
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right mobile-nav-toggler">
+              <i class="fa fa-bars"></i>
+            </button>
+      
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+              <ul class="navbar-nav ml-auto main-menu">
+                <li class="nav-item active"><a href="index.html" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a href="about-2.html" class="nav-link text-uppercase font-weight-bold">About</a></li>
+                <li class="nav-item"><a href="project-element-1.html" class="nav-link text-uppercase font-weight-bold">Properties</a></li>
+                <li class="nav-item"><a href="media.html" class="nav-link text-uppercase font-weight-bold">Media</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
+              </ul>
             </div>
-        </div>
-
-        <!--sticky Header-->
-        <div class="sticky-header">
-            <div class="auto-container">
-                <div class="outer-box clearfix">
-                    <div class="logo-box pull-left">
-                        <figure class="logo"><a href="index.html"><img src="assets/Images-Eradat/Logo/Logo-edited-new-version-header.png" alt=""></a></figure>
-                    </div>
-                    <div class="menu-area pull-right">
-                        <nav class="main-menu clearfix" style="margin-top: 25px;">
-                            <!--Keep This Empty / Menu will come through Javascript-->
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- main-header end -->
-
-    <!-- Mobile Menu  -->
-    <div class="mobile-menu">
+          </div>
+        </nav>
+      </header>
+      
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
         <div class="menu-backdrop"></div>
         <div class="close-btn"><i class="fas fa-times"></i></div>
+      
         <nav class="menu-box">
-            <div class="nav-logo"><a href="index.html"><img src="assets/Images-Eradat/Logo/Logo-edited-new-version-header.png" alt="" title=""></a></div>
-            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-            <div class="contact-info">
-                <h4>Contact Info</h4>
-                <ul>
-                    <li>Kuwait City, Kuwait</li>
-                    <li><a href="tel:+965 24343434">+965 24343434</a></li>
-                    <li><a href="mailto:info@eradat.com">info@eradat.com</a></li>
-                </ul>
-            </div>
-            <div class="social-links">
-                <ul class="clearfix">
-                    <li><a href="index.html"><span class="fab fa-twitter"></span></a></li>
-                    <li><a href="index.html"><span class="fab fa-facebook-square"></span></a></li>
-                    <li><a href="index.html"><span class="fab fa-instagram"></span></a></li>
-                </ul>
-            </div>
+          <div class="nav-logo">
+            <a href="index.html">
+              <img src="assets/Images-Eradat/Logo/Eradat_logos_-_black_and_white_-_121_by_129-removebg-preview.png" alt="Image" id="mobile-logo">
+            </a>
+          </div>
+          <div class="menu-outer">
+            <ul class="navbar-nav ml-auto main-menu">
+              <li class="nav-item active" style="color: #fff;"><a href="index.html" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a href="about-2.html" class="nav-link text-uppercase font-weight-bold">About</a></li>
+              <li class="nav-item"><a href="project-element-1.html" class="nav-link text-uppercase font-weight-bold">Properties</a></li>
+              <li class="nav-item"><a href="media.html" class="nav-link text-uppercase font-weight-bold">Media</a></li>
+              <li class="nav-item"><a href="contact.html" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
+            </ul>
+          </div>
+          <div class="contact-info">
+            <h4>Contact Info</h4>
+            <ul>
+              <li>Kuwait City, Kuwait</li>
+              <li><a href="tel:+965415651651">+965 415651651</a></li>
+              <li><a href="mailto:info@eradat.com">info@eradat.com</a></li>
+            </ul>
+          </div>
+          <div class="social-links">
+            <ul class="clearfix">
+              <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+              <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+              <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+            </ul>
+          </div>
         </nav>
-    </div>
+      </div>
     <!-- End Mobile Menu -->
 
     <!--Page Title-->
@@ -168,11 +127,17 @@
                         <div class="content-box">
                             <div class="sec-title style-four right">
                                 <h5>Residential</h5>
-                                <h2>Domus 1</h2>
+                                <h2>Domus 1 & 2</h2>
                             </div>
                             <div class="text">
-                                <p>Domus 1 property: Staff housing accommodation in Dubai, UAE, close to major tourism hubs. Gross floor area of 134,741 sqm, divided into two blocks.</p>
-                                <p>Building features: Each block can accommodate over 1000 hospitality staff, with 108 units ranging from 2 to 5 bedrooms per unit, parking area, swimming pool, gym, and recreational areas.</p>
+                                <p style="text-align: justify;">The Domus property is a staff housing accommodation located in Dubai, UAE, strategically situated close to major tourism hubs. The property boasts a substantial gross floor area of 134,741 sqm, divided into two blocks, and maintains a high occupancy rate of 100%.</p>
+                                <p style="text-align: justify;">Here are the notable features of the building:
+                                <p style="text-align: justify;">1. Two Blocks: The property consists of two blocks, providing ample space to accommodate over 1000 hospitality staff. The blocks are designed to meet the specific housing needs of the staff members, ensuring comfortable living conditions </p>
+                                <p style="text-align: justify;">2. Range of Unit Sizes: Each block comprises 108 units with varying sizes, ranging from 2 to 5 bedrooms per unit. This diverse range of unit sizes allows for flexibility in accommodating staff members with different accommodation requirements.</p>
+                                <p style="text-align: justify;">3. Parking Area: The property offers a dedicated parking area, providing convenient and secure parking spaces for residents' vehicles. This feature adds to the overall convenience and accessibility of the accommodation.</p>
+                                <p style="text-align: justify;">4. Swimming Pool and Gym: The Domus property includes recreational facilities such as a swimming pool and a gym. These amenities offer a means for staff members to relax, exercise, and maintain a healthy lifestyle within the accommodation itself.</p>
+                                <p style="text-align: justify;">5. Recreational Areas: In addition to the swimming pool and gym, the property provides other recreational areas that contribute to a pleasant living environment for the staff members. These areas may include gardens, outdoor seating spaces, or communal gathering areas</p>
+                                <p style="text-align: justify;">The Domus 1&2 property addresses the housing needs of hospitality staff in Dubai, particularly targeting companies within a 25-minute radius. The market for hospitality housing in the area is fragmented, creating an opportunity for the project to establish itself as a preferred choice. The property's close proximity to major tourist destinations further enhances its appeal, offering convenient access to potential hospitality assets and ensuring a vibrant living environment for the staff members. </p>        
                             </div>
                         </div>
                     </div>
