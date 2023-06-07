@@ -830,26 +830,22 @@
 	}
   });
 
-  window.addEventListener("scroll", function () {
-	const navbar = document.querySelector(".navbar");
-	const pageTitleSection = document.querySelector(".page-title.centred");
-  
-	const pageTitleSectionOffset = pageTitleSection.offsetTop;
-	const scrolled = window.scrollY > pageTitleSectionOffset + pageTitleSection.offsetHeight;
-  
-	navbar.classList.toggle("scrolled", scrolled);
-  
-	const navLinks = document.querySelectorAll(".navbar .nav-link");
-	if (scrolled) {
-	  navLinks.forEach(function (link) {
-		link.style.color = "#000000"; // Set font color to black
-	  });
-	} else {
-	  navLinks.forEach(function (link) {
-		link.style.color = "#ffffff"; // Set font color to white
-	  });
-	}
-  });
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    const navLinks = document.querySelectorAll(".navbar .nav-link");
+
+    if (window.scrollY > 0) {
+        navbar.classList.add("scrolled");
+        navLinks.forEach(function(link) {
+            link.style.color = "#000000"; // Set font color to black
+        });
+    } else {
+        navbar.classList.remove("scrolled");
+        navLinks.forEach(function(link) {
+            link.style.color = "#ffffff"; // Set font color to white
+        });
+    }
+});
 
    /* =======================================================================================
    For Mobile View Navbar
@@ -897,3 +893,12 @@
 	});
   });
   
+  $(document).ready(function(){
+	$('.carousel').carousel();
+});
+
+$(document).ready(function() {
+    $('.carousel-item img').on('load', function() {
+      $('#carouselExampleControls').css('visibility', 'visible'); // Show the carousel once the image is loaded
+    });
+  });

@@ -101,7 +101,7 @@ body {
 .auto-container{
   position:static;
   max-width:1170px;
-  padding:0px 15px;
+  padding:50px 15px 0px 15px;
   margin:0 auto;
 }
 
@@ -12855,4 +12855,59 @@ h4 a{
   height: 100%;
   background-size: cover;
   background-position: center;
+}
+
+.custom-margin-left-right {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.image-overlay {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.overlay-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: white; /* Set font color to white */
+}
+
+.overlay-description {
+  font-size: 16px;
+  color: white; /* Set font color to white */
+}
+
+.carousel-inner .carousel-item .image-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Set overlay background color */
+  z-index: 1;
+}
+
+.sec-title.custom-title {
+  background-color: #c2b69c;
+  padding: 56px 0;
+  margin: 0;
+}
+
+.sec-title.custom-title h2 {
+  color: white; /* Set font color to white */
 }
