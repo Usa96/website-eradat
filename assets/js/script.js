@@ -773,14 +773,14 @@
    ========================================================================== */
 
    $(function () {
-    $(window).on('scroll', function () {
-        if ( $(window).scrollTop() > 10 ) {
-            $('.navbar').addClass('active');
-        } else {
-            $('.navbar').removeClass('active');
-        }
-    });
-});
+	$(window).on('scroll', function () {
+	  if ($(window).scrollTop() > 10) {
+		$('.navbar').addClass('active');
+	  } else {
+		$('.navbar').removeClass('active');
+	  }
+	});
+  });
 
 	/* ==========================================================================
    For NavBar - Home page
@@ -802,27 +802,16 @@
 	}
   });
 
-  window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", function() {
 	const navbar = document.querySelector(".navbar");
-	const bannerSection = document.querySelector(".banner-section");
+	const header = document.querySelector("header");
   
-	const bannerSectionHeight = bannerSection.offsetHeight;
-	const scrolled = window.scrollY > bannerSection.offsetTop + bannerSectionHeight;
+	const scrolled = window.scrollY > header.offsetHeight;
   
 	navbar.classList.toggle("scrolled", scrolled);
-  
-	const navLinks = document.querySelectorAll(".navbar .nav-link");
-	if (scrolled) {
-	  navLinks.forEach(function (link) {
-		link.style.color = "#000000"; // Set font color to black
-	  });
-	} else {
-	  navLinks.forEach(function (link) {
-		link.style.color = "#ffffff"; // Set font color to white
-	  });
-	}
   });
-
+  
+  
   	/* =======================================================================================
    For NavBar - About us page - changing the font color and logo after passing section feature
    =========================================================================================== */
@@ -830,11 +819,10 @@
    window.addEventListener("scroll", function() {
 	const navbar = document.querySelector(".navbar");
 	const logo = navbar.querySelector("img");
-	const pageTitleSection = document.querySelector(".page-title.centred");
-  
-	const scrolled = window.scrollY > pageTitleSection.offsetTop + pageTitleSection.offsetHeight;
+	const scrolled = window.scrollY > 10; // Change the scroll threshold as desired
   
 	navbar.classList.toggle("scrolled", scrolled);
+	
 	if (scrolled) {
 	  logo.setAttribute("src", "assets/Images-Eradat/Logo/ERADAT-Logo-121 by 129.png");
 	} else {
