@@ -710,7 +710,7 @@
 }
 
 .main-footer.alternet-3 .widget-section .logo-widget .info-list li i{
-  color: #1c6ead;
+  color: #dc3545;
 }
 
 .main-footer.alternet-3 .widget-section .logo-widget .info-list li a:hover {
@@ -722,11 +722,11 @@
 }
 
 .main-footer.alternet-3 .widget-section .footer-widget .widget-title h4:before{
-	background: #1c6ead;
+	background: #dc3545;
 }
 
 .main-footer.alternet-3 .widget-section .links-widget .widget-content ul li a:hover {
-   color: #1c6ead;
+   color: #dc3545;
 }
 
 .main-footer.alternet-3 .widget-section .newsletter-widget .newsletter-form .form-group input:focus{
