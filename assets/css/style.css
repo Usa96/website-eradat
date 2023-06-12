@@ -12951,3 +12951,24 @@ h4 a{
 .banner-carousel .active .slide-item .video-layer {
   transform: scale(1.15);
 }
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.7); /* Set a semi-transparent background color */
+  padding: 10px; /* Add some padding around the text */
+  color: #fff; /* Set the text color to white */
+}
+
+.carousel-caption h3 {
+  font-size: 24px; /* Increase the font size of the heading */
+  font-weight: bold; /* Add a bold style to the heading */
+  margin-bottom: 10px; /* Add some space below the heading */
+}
+
+.carousel-caption p {
+  font-size: 16px; /* Increase the font size of the description */
+  margin-bottom: 0; /* Remove the default margin below the description */
+}
+
+.main-menu .nav-item:not(:last-child) {
+  margin-right: 30px; /* Add right margin between navigation elements */
+}
