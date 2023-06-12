@@ -12804,7 +12804,7 @@ h4 a{
 
 .navbar {
   transition: all 0.4s;
-  background-color: transparent /* Set initial background color to black */
+  background-color: transparent; /* Set initial background color to black */
   color: #ffffff; /* Set font color to white */
 }
 
