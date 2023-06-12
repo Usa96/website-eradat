@@ -4332,7 +4332,7 @@ h4 a{
   position: relative;
   display: block;
   padding-left: 22px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .main-footer .widget-section .links-widget .widget-content ul li:before{
@@ -4359,6 +4359,16 @@ h4 a{
 
 .main-footer .widget-section .links-widget .widget-content ul li a:hover{
 
+}
+
+.main-footer .widget-section .links-widget .widget-content ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-footer .widget-section .links-widget .widget-content ul li {
+  flex: 0 0 auto;
+  margin-right: 15px;
 }
 
 .main-footer .widget-section .newsletter-widget .widget-content .text{
@@ -7968,51 +7978,65 @@ h4 a{
 
 /** banner-style-four **/
 
-.banner-section.style-four{
+.banner-section.style-four {
   position: relative;
+  max-height: 50%; /* Adjust the height as desired */
 }
 
-.banner-section.style-four .banner-carousel .slide-item{
-  padding: 210px 0px 215px 0px;
+.banner-section.style-four .banner-carousel .slide-item {
+  padding: 0;
+  height: 50%; /* Make the slide items take the full height of the banner */
 }
 
-.banner-section.style-four .banner-carousel .slide-item:before{
+.banner-section.style-four .banner-carousel .slide-item:before {
   background: -webkit-linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.10) 100%);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.banner-section.style-four .owl-theme .owl-nav .owl-prev:hover, 
-.banner-section.style-four .owl-theme .owl-nav .owl-next:hover {
-
+.banner-section.style-four .content-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: transparent;
+  border-radius: 10px; /* Adjust the border-radius as desired */
+  text-align: center;
 }
 
-.banner-section.style-four .content-box h1{
+.banner-section.style-four .content-box h1 {
   margin-bottom: 20px;
+  color: #fff;
 }
 
-.banner-section.style-four .content-box p{
+.banner-section.style-four .content-box p {
   font-size: 18px;
   line-height: 30px;
   color: #fff;
   margin-bottom: 40px;
 }
 
-.banner-section.style-four .content-box .btn-box .theme-btn{
+.banner-section.style-four .content-box .btn-box {
+  margin-top: 20px;
+}
+
+.banner-section.style-four .content-box .btn-box .theme-btn,
+.banner-section.style-four .content-box .btn-box .banner-btn-two {
   overflow: hidden;
   border-radius: 5px;
   margin-right: 15px;
 }
 
-.banner-section.style-four .content-box .btn-box .banner-btn-two{
-  overflow: hidden;
-  border-radius: 5px;
+.banner-section.style-four .content-box .btn-box .banner-btn-two {
   padding: 13px 28px;
 }
 
-.banner-section.style-four .content-box .btn-box .banner-btn-two:hover{
-
-}
-
-.banner-section.style-four .content-box .btn-box .banner-btn{
+.banner-section.style-four .content-box .btn-box .banner-btn {
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -8025,11 +8049,7 @@ h4 a{
   z-index: 1;
 }
 
-.banner-section.style-four .content-box .btn-box .banner-btn:hover{
-
-}
-
-.banner-section.style-four .content-box .btn-box .banner-btn:before{
+.banner-section.style-four .content-box .btn-box .banner-btn:before {
   position: absolute;
   content: '';
   background: #fff;
@@ -8041,10 +8061,11 @@ h4 a{
   transition: all 500ms ease;
 }
 
-.banner-section.style-four .content-box .btn-box .banner-btn:hover:before{
+.banner-section.style-four .content-box .btn-box .banner-btn:hover:before {
   left: 0px;
   width: 100%;
 }
+
 
 
 /** feature-style-three **/
@@ -12969,6 +12990,8 @@ h4 a{
   margin-bottom: 0; /* Remove the default margin below the description */
 }
 
+/* For adding space between navbar elements */
 .main-menu .nav-item:not(:last-child) {
   margin-right: 30px; /* Add right margin between navigation elements */
 }
+/* End */
