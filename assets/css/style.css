@@ -12995,3 +12995,11 @@ h4 a{
   margin-right: 30px; /* Add right margin between navigation elements */
 }
 /* End */
+
+/* Hiding navigation buttons */
+
+.hide-navigation .owl-nav {
+  display: none !important;
+}
+
+/* End */
