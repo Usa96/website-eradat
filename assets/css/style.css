@@ -13007,3 +13007,293 @@ h4 a{
 .image-box{
   margin: 0;
 }
+
+/* for sharepoint link in the bottom footer */
+
+.icon-content {
+	overflow:hidden;
+}
+
+Padding 
+
+.p-tb20 {padding-bottom:20px; padding-top:20px;}
+
+.overlay-wraper >  .wt-icon-box-wraper,
+.overlay-wraper > .wt-left-part,
+.overlay-wraper > .wt-right-part{ 
+	position:relative;
+	z-index:1; 
+}
+/*-------------------------------------
+	4. For only icons
+-------------------------------------*/
+.icon-md,
+.icon-sm,
+.icon-xs {
+	display:inline-block;
+    text-align: center;
+}
+.icon-md i,
+.icon-md [class*="flaticon-"]::before, 
+.icon-md [class*="flaticon-"]::after {
+ font-size:45px;
+}
+.icon-md i,
+.icon-sm i,
+.icon-xs i {
+	vertical-align:middle;
+}
+.icon-md {
+	width:60px;
+}
+.icon-md i {
+	font-size:45px;
+}
+.icon-md img,
+.icon-sm img,
+.icon-xs img {
+	vertical-align:middle;
+	max-width:100%;
+	width:auto; 
+}
+.icon-md img {
+	height:50px;
+}
+.wt-icon-box-wraper.left .icon-md,
+.wt-icon-box-wraper.left .icon-sm,
+.wt-icon-box-wraper.left .icon-xs {
+	float:left;
+	margin-right:10px;
+}
+.wt-icon-box-wraper.left .icon-md,
+	.wt-icon-box-wraper.left .icon-sm,
+	.wt-icon-box-wraper.left .icon-xs {
+		float:none;
+		margin-right:0px;
+		margin-bottom: 10px;
+	}	
+.wt-icon-box-wraper.right .icon-md,
+.wt-icon-box-wraper.right .icon-sm,
+.wt-icon-box-wraper.right .icon-xs {
+	float:right;
+	margin-left:10px;
+}
+.wt-icon-box-wraper.right .icon-md,
+.wt-icon-box-wraper.right .icon-sm,
+.wt-icon-box-wraper.right .icon-xs {
+	float:none;
+	margin-left:0px;
+	margin-bottom: 10px;
+}	
+/*------------------------------------- 
+	3. float-clearfix 
+-------------------------------------*/
+.clearfix::after,
+.filter-wrap::after,
+.filter-wrap::after,
+.wt-icon-box-wraper::after,
+ol.commentlist li::after {
+	content: "";
+	display: table;
+	clear: both;
+} 
+
+.bdr-gray-dark{border-color:#333333;}
+
+.p-tb15 {padding-bottom:15px; padding-top:15px;}
+.p-tb150 {padding-bottom:150px; padding-top:150px;}
+.p-lr100 {padding-left:100px; padding-right:100px;}
+.p-lr10 {padding-left:10px; padding-right:10px;}
+
+.about-types .wt-icon-box-wraper{
+	border-width:0px 0px 0px 3px;
+}
+.wt-icon-box-wraper {
+	position:relative;
+}
+.wt-icon-box-wraper .wt-tilte{
+	margin-top:0;
+}
+.wt-icon-box-wraper .after-titile-line{
+	margin-bottom:10px;
+}
+.wt-icon-box-wraper p:last-child {
+	margin:0px;
+}
+
+.wt-icon-box-wraper.left .wt-icon-box-xld,
+.wt-icon-box-wraper.left .wt-icon-box-xl,
+.wt-icon-box-wraper.left .wt-icon-box-lg,
+.wt-icon-box-wraper.left .wt-icon-box-md,
+.wt-icon-box-wraper.left .wt-icon-box-sm,
+.wt-icon-box-wraper.left .wt-icon-box-xs {
+	float:left;
+	margin-right:20px;
+}
+.wt-icon-box-wraper.left .icon-xld,
+.wt-icon-box-wraper.left .icon-xl,
+.wt-icon-box-wraper.left .icon-lg,
+.wt-icon-box-wraper.left .icon-md,
+.wt-icon-box-wraper.left .icon-sm,
+.wt-icon-box-wraper.left .icon-xs {
+	float:left;
+	margin-right:10px;
+}
+
+@media only screen and (max-width:375px){
+	.wt-icon-box-wraper.left .wt-icon-box-xld,
+	.wt-icon-box-wraper.left .wt-icon-box-xl,
+	.wt-icon-box-wraper.left .wt-icon-box-lg,
+	.wt-icon-box-wraper.left .wt-icon-box-md,
+	.wt-icon-box-wraper.left .wt-icon-box-sm,
+	.wt-icon-box-wraper.left .wt-icon-box-xs {
+		float:none;
+		margin-right:0px;
+		margin-bottom: 10px;
+	}
+	.wt-icon-box-wraper.left .icon-xld,
+	.wt-icon-box-wraper.left .icon-xl,
+	.wt-icon-box-wraper.left .icon-lg,
+	.wt-icon-box-wraper.left .icon-md,
+	.wt-icon-box-wraper.left .icon-sm,
+	.wt-icon-box-wraper.left .icon-xs {
+		float:none;
+		margin-right:0px;
+		margin-bottom: 10px;
+	}	
+}
+/*-------------------------------------
+	7. icon box right align
+-------------------------------------*/
+.wt-icon-box-wraper.right {
+	text-align:right;
+}
+.wt-icon-box-wraper.right .wt-icon-box-xld,
+.wt-icon-box-wraper.right .wt-icon-box-xl,
+.wt-icon-box-wraper.right .wt-icon-box-lg,
+.wt-icon-box-wraper.right .wt-icon-box-md,
+.wt-icon-box-wraper.right .wt-icon-box-sm,
+.wt-icon-box-wraper.right .wt-icon-box-xs {
+	float:right;
+	display:table;
+	margin-left:20px;
+}
+.wt-icon-box-wraper.right .icon-xld,
+.wt-icon-box-wraper.right .icon-xl,
+.wt-icon-box-wraper.right .icon-lg,
+.wt-icon-box-wraper.right .icon-md,
+.wt-icon-box-wraper.right .icon-sm,
+.wt-icon-box-wraper.right .icon-xs {
+	float:right;
+	margin-left:10px;
+}
+@media only screen and (max-width:375px){
+.wt-icon-box-wraper.right {
+	text-align:left;
+}
+.wt-icon-box-wraper.right .wt-icon-box-xld,
+.wt-icon-box-wraper.right .wt-icon-box-xl,
+.wt-icon-box-wraper.right .wt-icon-box-lg,
+.wt-icon-box-wraper.right .wt-icon-box-md,
+.wt-icon-box-wraper.right .wt-icon-box-sm,
+.wt-icon-box-wraper.right .wt-icon-box-xs {
+	float:none;
+	display:table;
+	margin-left:0px;
+	margin-bottom: 10px;
+}
+.wt-icon-box-wraper.right .icon-xld,
+.wt-icon-box-wraper.right .icon-xl,
+.wt-icon-box-wraper.right .icon-lg,
+.wt-icon-box-wraper.right .icon-md,
+.wt-icon-box-wraper.right .icon-sm,
+.wt-icon-box-wraper.right .icon-xs {
+	float:none;
+	margin-left:0px;
+	margin-bottom: 10px;
+}	
+}
+/*-------------------------------------
+	8. icon box center align
+-------------------------------------*/
+.wt-icon-box-wraper.center {
+	text-align:center;
+}
+.wt-icon-box-wraper.center .wt-icon-box-xld,
+.wt-icon-box-wraper.center .wt-icon-box-xl,
+.wt-icon-box-wraper.center .wt-icon-box-lg,
+.wt-icon-box-wraper.center .wt-icon-box-md,
+.wt-icon-box-wraper.center .wt-icon-box-sm,
+.wt-icon-box-wraper.center .wt-icon-box-xs  {
+	margin-left:auto;
+	margin-right:auto;
+}
+.wt-icon-box-wraper.bx-style-1,
+.wt-icon-box-wraper.bx-style-2 {
+	border-width:1px;
+	border-style:solid;
+	border-color:#ddd;
+}
+.wt-icon-box-wraper.bx-style-2.center [class*="wt-icon-box-"],
+.wt-icon-box-wraper.bx-style-2.left [class*="wt-icon-box-"], 
+.wt-icon-box-wraper.bx-style-2.right [class*="wt-icon-box-"]	{ 
+	position:absolute;
+}
+.wt-icon-box-wraper.bx-style-2.center [class*="wt-icon-box-"]	{ 
+	position:absolute;
+	top:0;
+	left:50%;
+	transform: translateY(-50%);
+}
+.wt-icon-box-wraper.bx-style-2.center .wt-icon-box-xl	{ margin-left:-75px; }
+.wt-icon-box-wraper.bx-style-2.center .wt-icon-box-lg	{ margin-left:-60px; }
+.wt-icon-box-wraper.bx-style-2.center .wt-icon-box-md{ margin-left:-50px; }
+.wt-icon-box-wraper.bx-style-2.center .wt-icon-box-sm	{ margin-left:-40px; }
+.wt-icon-box-wraper.bx-style-2.center .wt-icon-box-xs	{ margin-left:-20px; }
+.wt-icon-box-wraper.bx-style-2.left [class*="wt-icon-box-"]	{ 
+	position:absolute;
+	top:auto;
+	left:0;
+	transform: translateX(-50%);
+}
+.wt-icon-box-wraper.bx-style-2.right [class*="wt-icon-box-"]	{ 
+	position:absolute;
+	top:20px;
+	right:0;
+	transform: translateX(50%);
+}
+
+.wt-icon-box-wraper[class*="border-"] {
+	border-color:#eee;
+}
+
+.clearfix::after,
+.filter-wrap::after,
+.filter-wrap::after,
+.wt-icon-box-wraper::after,
+ol.commentlist li::after {
+	content: "";
+	display: table;
+	clear: both;
+} 
+.animate_line .wt-icon-box-wraper{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.wt-icon-box-wraper.left.bdr-1.bdr-gray-dark.p-tb15.p-lr10.clearfix a .a {
+  text-decoration: none; /* Remove default text decoration */
+  border-bottom: 1px solid transparent; /* Add transparent border bottom */
+}
+
+.wt-icon-box-wraper.left.bdr-1.bdr-gray-dark.p-tb15.p-lr10.clearfix a:hover .a {
+  border-bottom: 1px solid red; /* Add red border bottom on hover */
+}
+.sharepoint-link {
+  outline: 2px solid white;
+  text-decoration: none; /* Add this line to remove underline */
+}
+
+.wt-icon-box-wraper .left .bdr-1 .bdr-gray-dark .p-tb15 .p-lr10 .clearfix {
+  margin: 150px 0 0 150px;
+}
